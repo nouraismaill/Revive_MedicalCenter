@@ -13,11 +13,13 @@ const Home = () => {
         <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
           <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
             <h1 className="text-[36px] leading-[46px] text-black font-[700] md:text-[60px] md:leading-[70px]">
-              We help patients live a healthy, longer life.
+              Empowering healthier lives.
             </h1>
             <p>
-              Sed ut perspiciatis unde omnis iste natus voluptatem accusantium
-              doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+              Experience exceptional healthcare at Revive Medical Center. Our
+              team of healthcare professionals delivers compassionate,
+              patient-centered care tailored to your unique needs. Discover the
+              difference today!
             </p>
             <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0 ">
               <a
