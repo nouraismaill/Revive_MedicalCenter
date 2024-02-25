@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .text_para {
+    @apply text-[18px] leading-[30px] font-[400]  text-gray-600 mt-[18px];
+  }
+}
