@@ -23,7 +23,7 @@ const Home = () => {
             </p>
             <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0 ">
               <a
-                href="javascript:void(0)"
+                href="/doctors"
                 className="block py-2 px-4 text-center text-white font-[600] bg-bluehavy duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-[50px] shadow-lg hover:shadow-none"
               >
                 Request an Appointment
