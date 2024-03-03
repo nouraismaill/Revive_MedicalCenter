@@ -7,7 +7,8 @@ module.exports = withMT({
     colors: {
       Offwh: "#fefefa",
       bluehavy: "#28AADC",
-      babyblue: "#bbdefb",
+      babyblue: "#F3FAFF",
+      darkblue: "#300285",
     },
     extend: {},
   },

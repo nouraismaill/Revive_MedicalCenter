@@ -1,8 +1,9 @@
 import Servicess from "../components/service";
 import doctorImg from "../assets/images/doctor.png";
 import FaqList from "../components/faqList";
-
+import Team from "../components/Team";
 import { Link } from "react-router-dom";
+
 import Stats from "../components/stats";
 
 const Home = () => {
@@ -32,14 +33,15 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div>
+      <div className="py-[60px]">
         <Stats />
       </div>
       <div>
         <Servicess />
       </div>
-
-      <FaqList />
+      <div className="pt-0">
+        <Team />
+      </div>
     </>
   );
 };

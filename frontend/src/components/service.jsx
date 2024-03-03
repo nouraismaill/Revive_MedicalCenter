@@ -1,157 +1,84 @@
 import react from "react";
+
 const Servicess = () => {
   return (
-    <section class="bg-white dark:bg-gray-900">
-      <div class="container px-6 py-10 mx-auto">
+    <section class="bg-white dark:bg-gray-900 ">
+      <div class="container px-6 py-14 mx-auto">
         <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
-          explore our awesome <span class="text-blue-500">Components</span>
+          Explore our <span class="text-blue-500">Services</span>
         </h1>
 
         <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
-          <div class="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
-            <span class="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-                />
-              </svg>
+          <div class="flex flex-col items-center p-6 space-y-3 text-center bg-babyblue rounded-xl dark:bg-gray-800">
+            <span class="inline-block p-3 text-blue-500 bg-blue-500 rounded-full dark:text-white dark:bg-blue-500">
+              <img
+                src="https://assets-global.website-files.com/65bb1ade509e90321a2f3fb7/65bb1ade509e90321a2f40e1_medical-service-one.svg"
+                loading="lazy"
+                alt="Service Icon"
+                class="service-icon-image"
+              />
             </span>
 
             <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">
-              Copy & paste components
+              Cardiologist
             </h1>
 
             <p class="text-gray-500 dark:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              ab nulla quod dignissimos vel non corrupti doloribus voluptatum
-              eveniet
+              Objectively integrate enterprise-wide strategic theme areas with
+              functionalized infrastructures.
             </p>
-
-            <a
-              href="#"
-              class="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-            >
-              <span class="mx-1">read more</span>
-              <svg
-                class="w-4 h-4 mx-1 rtl:-scale-x-100"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
           </div>
 
-          <div class="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
-            <span class="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                />
-              </svg>
+          <div class="flex flex-col items-center p-6 space-y-3 text-center bg-babyblue rounded-xl dark:bg-gray-800">
+            <span class="inline-block p-3 text-blue-500 bg-blue-500 rounded-full dark:text-white dark:bg-blue-500">
+              <img
+                src="https://assets-global.website-files.com/65bb1ade509e90321a2f3fb7/65bb1ade509e90321a2f40df_medical-service-two.svg"
+                loading="lazy"
+                alt="Service Icon"
+                class="service-icon-image"
+              />
             </span>
 
             <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">
-              Zero Configuration
+              Pulmonary
             </h1>
 
             <p class="text-gray-500 dark:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              ab nulla quod dignissimos vel non corrupti doloribus voluptatum
-              eveniet
+              Interactively productize premium technologies where interdependent
+              quality vectors available.
             </p>
-
-            <a
-              href="#"
-              class="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-            >
-              <span class="mx-1">read more</span>
-              <svg
-                class="w-4 h-4 mx-1 rtl:-scale-x-100"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
           </div>
 
-          <div class="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
-            <span class="inline-block p-3 text-blue-500 bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                />
-              </svg>
+          <div class="flex flex-col items-center p-6 space-y-3 text-center  bg-babyblue rounded-xl dark:bg-gray-800">
+            <span class="inline-block p-3 text-blue-500 bg-blue-500  rounded-full dark:text-white dark:bg-blue-500">
+              <img
+                src="https://assets-global.website-files.com/65bb1ade509e90321a2f3fb7/65bb1ade509e90321a2f40dd_medical-service-five.svg"
+                loading="lazy"
+                alt="Service Icon"
+                class="service-icon-image"
+              />
             </span>
 
             <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">
-              Simple & clean designs
+              Neurology
             </h1>
 
             <p class="text-gray-500 dark:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              ab nulla quod dignissimos vel non corrupti doloribus voluptatum
-              eveniet
+              Quickly communicate enabled technology and turnkey leadership
+              skills for the doctor.
             </p>
-
-            <a
-              href="#"
-              class="flex items-center -mx-1 text-sm text-blue-500 capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
-            >
-              <span class="mx-1">read more</span>
-              <svg
-                class="w-4 h-4 mx-1 rtl:-scale-x-100"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
           </div>
         </div>
+      </div>
+      <div className="centered-container ">
+        <a href="/services">
+          <button
+            type="button"
+            class="text-white text-center bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            VIEW ALL SERVICES
+          </button>
+        </a>
       </div>
     </section>
   );

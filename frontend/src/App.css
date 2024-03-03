@@ -78,14 +78,14 @@ Navbar {
 .nav li a {
   text-decoration: none;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 800;
   font-family: "Manrope", sans-serif;
   color: #300285;
   transition: 0.3s ease-in-out;
 }
 .nav li a:hover,
 .nav li a.active {
-  color: #17cf97;
+  color: #28aadc;
 }
 
 .nav li a:hover::after,
@@ -93,7 +93,7 @@ Navbar {
   content: "";
   width: 30%;
   height: 2px;
-  background: #17cf97;
+  background: #28aadc;
   position: absolute;
   bottom: -4px;
   left: 20px;
@@ -164,4 +164,7 @@ Navbar {
 /* button click effect*/
 .Btn:active {
   transform: translate(2px, 2px);
+}
+.centered-container {
+  text-align: center;
 }

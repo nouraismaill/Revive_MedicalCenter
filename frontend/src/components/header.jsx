@@ -14,6 +14,7 @@ import {
 
 const StickyNavbar = () => {
   const [openNav, setOpenNav] = React.useState(false);
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
@@ -22,34 +23,50 @@ const StickyNavbar = () => {
   }, []);
 
   const navList = (
-    <ul className=" mt-0 mb-3 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-800 ">
-      <Typography as="li" variant="small" className="p-1 font-normal">
-        <Link to="/home" className="flex items-center">
-          Home
-        </Link>
-      </Typography>
-      <Typography as="li" variant="small" className="p-1 font-normal">
-        <Link to="/services" className="flex items-center">
-          Services
-        </Link>
-      </Typography>
-      <Typography as="li" variant="small" className="p-1 font-normal">
-        <Link to="/doctors" className="flex items-center">
-          Find a Doctor
-        </Link>
-      </Typography>
-      <Typography as="li" variant="small" className="p-1 font-normal">
-        <Link to="/contact" className="flex items-center">
-          Contact
-        </Link>
-      </Typography>
+    <ul className="mt-0 mb-3 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-800">
+      <li className="p-1 font-normal">
+        <NavLink
+          to="/home"
+          className="flex items-center"
+          activeClassName="active"
+        >
+          HOME
+        </NavLink>
+      </li>
+      <li className="p-1 font-normal">
+        <NavLink
+          to="/services"
+          className="flex items-center"
+          activeClassName="active"
+        >
+          SERVICES
+        </NavLink>
+      </li>
+      <li className="p-1 font-normal">
+        <NavLink
+          to="/doctors"
+          className="flex items-center"
+          activeClassName="active"
+        >
+          FIND A DOCTOR
+        </NavLink>
+      </li>
+      <li className="p-1 font-normal">
+        <NavLink
+          to="/contact"
+          className="flex items-center"
+          activeClassName="active"
+        >
+          CONTACT
+        </NavLink>
+      </li>
     </ul>
   );
   return (
     <Navbar className="nav sticky top-0 z-0 h-max max-w-full rounded-none px-4 py-2 lg:px-9 lg:py-0">
-      <div className="flex items-center justify-between text-blue-gray-900">
+      <div className="flex items-center justify-between my-[-20px] text-blue-gray-900">
         <Link to="/">
-          <img src={logo} alt="" width={120} />
+          <img src={logo} alt="" className="pt-2" width={127} />
         </Link>
         <div className="flex items-center gap-4">
           <div className="mr-4 hidden lg:block">{navList}</div>

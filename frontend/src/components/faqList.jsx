@@ -1,4 +1,5 @@
 import FaqsCard from "./faq";
+import doctors from "../assets/images/doctors.png";
 const FaqList = () => {
   const faqsList = [
     {
@@ -25,7 +26,8 @@ const FaqList = () => {
 
   return (
     <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8">
-      <div className="space-y-3 text-center">
+      <div className=" flex flex-col col-span-1 space-y-3 text-center">
+        <img src={doctors} alt="" />
         <h1 className="text-3xl text-gray-800 font-semibold">
           Frequently Asked Questions
         </h1>
