@@ -3,113 +3,126 @@ import logo from "../assets/images/logo1.png";
 import { NavLink, Link } from "react-router-dom";
 import userImg from "../assets/images/avatar-icon.png";
 import "../App.css";
-const Navbar = () => {
-  const headerRef = useRef(null);
-  const [state, setState] = useState(false);
-  const navigation = [
-    { title: "Home", path: "/home" },
-    { title: "Find a Doctor", path: "/doctors" },
-    { title: "Services", path: "/services" },
-    { title: "Contact", path: "/contact" },
-  ];
+import {
+  Navbar,
+  MobileNav,
+  Typography,
+  Button,
+  IconButton,
+  Card,
+} from "@material-tailwind/react";
 
+const StickyNavbar = () => {
+  const [openNav, setOpenNav] = React.useState(false);
+  React.useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 960 && setOpenNav(false)
+    );
+  }, []);
+
+  const navList = (
+    <ul className=" mt-0 mb-3 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-800 ">
+      <Typography as="li" variant="small" className="p-1 font-normal">
+        <Link to="/home" className="flex items-center">
+          Home
+        </Link>
+      </Typography>
+      <Typography as="li" variant="small" className="p-1 font-normal">
+        <Link to="/services" className="flex items-center">
+          Services
+        </Link>
+      </Typography>
+      <Typography as="li" variant="small" className="p-1 font-normal">
+        <Link to="/doctors" className="flex items-center">
+          Find a Doctor
+        </Link>
+      </Typography>
+      <Typography as="li" variant="small" className="p-1 font-normal">
+        <Link to="/contact" className="flex items-center">
+          Contact
+        </Link>
+      </Typography>
+    </ul>
+  );
   return (
-    <nav className="sticky_header mt-[-31px] bg-offwh border-b w-full md:static md:text-sm md:border-none ">
-      <div className=" items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
-        <div className="flex items-center justify-between py-3 md:py-5 md:block">
-          <a href="/">
-            <img
-              src={logo}
-              width={180}
-              className="mt-[9px]"
-              alt="Float UI logo"
-            />
-          </a>
-          <div className="md:hidden">
-            <button
-              className="text-gray-500 hover:text-gray-800"
-              onClick={() => setState(!state)}
-            >
-              {state ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
-              )}
-            </button>
+    <Navbar className="nav sticky top-0 z-0 h-max max-w-full rounded-none px-4 py-2 lg:px-9 lg:py-0">
+      <div className="flex items-center justify-between text-blue-gray-900">
+        <Link to="/">
+          <img src={logo} alt="" width={120} />
+        </Link>
+        <div className="flex items-center gap-4">
+          <div className="mr-4 hidden lg:block">{navList}</div>
+          <div className="hidden">
+            <Link to="/">
+              <figure className="w-[35px] h-[35px] rounded-full">
+                <img src={userImg} className="w-full rounded-full" alt="" />
+              </figure>
+            </Link>
           </div>
-        </div>
-        <div
-          className={`flex-1 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-            state ? "block" : "hidden"
-          }`}
-        >
-          <ul className="justify-end items-center text-[16px] space-y-6 md:flex md:space-x-6 md:space-y-0">
-            {navigation.map((item, idx) => {
-              return (
-                <li key={idx} className="text-gray-700 hover:text-indigo-600">
-                  <a href={item.path} className="block">
-                    {item.title}
-                  </a>
-                </li>
-              );
-            })}
-            <span className="hidden w-px h-6 bg-gray-300 md:block"></span>
-            <div className="space-y-3 items-center gap-x-6 md:flex md:space-y-0">
-              <li>
-                <a
-                  href="/login"
-                  className="block py-3 text-center text-gray-700 hover:text-indigo-600 border rounded-lg md:border-none"
-                >
-                  Log in
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/signup"
-                  className="block py-3 px-4 font-medium text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow md:inline"
-                >
-                  Sign in
-                </a>
-              </li>
+          <button className="Btn hidden lg:inline-block">
+            <div class="sign">
+              <svg viewBox="0 0 512 512">
+                <path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path>
+              </svg>
             </div>
-            <div className="flex items-center gap-4">
-              <div className="hidden">
-                <Link to="/">
-                  <figure className="w-[35px] h-[35px] rounded-full">
-                    <img src={userImg} className="w-full rounded-full" alt="" />
-                  </figure>
-                </Link>
-              </div>
-            </div>
-          </ul>
+
+            <Link to="/login">
+              <div class="text">Login</div>
+            </Link>
+          </button>
+
+          <IconButton
+            variant="text"
+            className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+            ripple={false}
+            onClick={() => setOpenNav(!openNav)}
+          >
+            {openNav ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                className="h-6 w-6"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </IconButton>
         </div>
       </div>
-    </nav>
+      <MobileNav open={openNav}>
+        {navList}
+        <div className="flex items-center gap-x-1">
+          <Button fullWidth variant="text" className="">
+            <Link to="/login">
+              <span>Log In</span>
+            </Link>
+          </Button>
+        </div>
+      </MobileNav>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default StickyNavbar;
