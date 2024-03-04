@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
 
         <p class="mt-6 text-sm  text-white lg:mt-0 dark:text-gray-400">
-          © . {currentYear} <a href="/">Revive Medical center</a>. All Rights
+          © . {currentYear} <a href="/">Revive Medical Center</a>. All Rights
           Reserved.
         </p>
       </div>

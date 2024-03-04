@@ -4,8 +4,8 @@ const Servicess = () => {
   return (
     <section class="bg-white dark:bg-gray-900 ">
       <div class="container px-6 py-14 mx-auto">
-        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
-          Explore our <span class="text-blue-500">Services</span>
+        <h1 class="text-2xl font-bold text-center text-black capitalize lg:text-5xl dark:text-white">
+          Explore our <span class="text-bluehavy">Services</span>
         </h1>
 
         <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
