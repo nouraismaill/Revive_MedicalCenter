@@ -33,7 +33,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className="py-[40px]">
+      <div className="py-[30px]">
         <Stats />
       </div>
       <div>
