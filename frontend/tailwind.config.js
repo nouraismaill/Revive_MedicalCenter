@@ -9,6 +9,7 @@ module.exports = withMT({
       bluehavy: "#28AADC",
       babyblue: "#F3FAFF",
       darkblue: "#300285",
+      heavygreen: "#64EBB6",
     },
     extend: {},
   },
