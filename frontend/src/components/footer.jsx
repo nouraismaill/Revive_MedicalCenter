@@ -1,5 +1,5 @@
 import React from "react";
-import logo1 from "../assets/images/logo1.png";
+import logo2 from "../assets/images/logo3.png";
 
 const currentYear = new Date().getFullYear();
 
@@ -8,7 +8,7 @@ const Footer = () => {
     <footer class="bg-darkblue">
       <div class="container flex flex-col items-center  justify-between px-6 py-8 mx-auto lg:flex-row">
         <a href="/">
-          <img class="w-auto h-20" src={logo1} alt="" />
+          <img class="w-auto h-20" src={logo2} alt="" />
         </a>
 
         <div class=" flex flex-wrap items-center justify-center gap-4 mt-6 lg:gap-6 lg:mt-0">

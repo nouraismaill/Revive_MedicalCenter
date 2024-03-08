@@ -14,16 +14,16 @@ const FaqsCard = (props) => {
 
   return (
     <div
-      className="space-y-3 mt-5 overflow-hidden border-b"
+      className="space-y-3 mt-5 overflow-hidden  border border-solid border-[#D9DCE2] mb-5 p-3 lg:p-2"
       key={idx}
       onClick={handleOpenAnswer}
     >
-      <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium">
+      <h4 className="cursor-pointer flex items-center justify-between text-[16px] leading-5 lg:text-[20px] lg:leading-7 text-black  font-medium ">
         {faqsList.q}
         {state ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-500 ml-2"
+            className=" bg-blue-400 h-5 w-5 lg:w-7 lg:h-7 border border-solid border-[#141F21] rounded flex items-center justify-center text-black ml-2"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -31,14 +31,14 @@ const FaqsCard = (props) => {
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="2"
+              stroke-width={2}
               d="M20 12H4"
             />
           </svg>
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 text-gray-500 ml-2"
+            className=" h-5 w-5 lg:w-7 lg:h-7 border border-solid border-[#141F21] rounded flex items-center justify-center text-black ml-2"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -54,12 +54,12 @@ const FaqsCard = (props) => {
       </h4>
       <div
         ref={answerElRef}
-        className="duration-300"
+        className="duration-300 "
         style={state ? { height: answerH } : { height: "0px" }}
       >
-        <div>
-          <p className="text-gray-500">{faqsList.a}</p>
-        </div>
+        <p className=" text-[14px] leading-9 lg:text-[16px] lg:leading-2 font-[400] text-black">
+          {faqsList.a}
+        </p>
       </div>
     </div>
   );

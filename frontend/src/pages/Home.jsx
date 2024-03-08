@@ -4,6 +4,8 @@ import FaqList from "../components/faqList";
 import Team from "../components/Team";
 import { Link } from "react-router-dom";
 
+import faqImg from "../assets/images/faq-img.png";
+
 import Stats from "../components/stats";
 
 const Home = () => {
@@ -11,7 +13,7 @@ const Home = () => {
     <>
       <section className=" lg:mt-0  bg-cover 4xl:h-[800px] sm:mt-[2px] bg-center ">
         <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
-          <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
+          <div className="flex-none space-y-6 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
             <h1 className="text-[36px] leading-[46px] text-black font-[700] md:text-[60px] md:leading-[70px]">
               We help patients live a healthy, longer life.
             </h1>
@@ -42,6 +44,18 @@ const Home = () => {
       <div className="pt-0">
         <Team />
       </div>
+      <section>
+        <div className="container">
+          <div className="flex justify-between gap-[50px] lg:gap-0">
+            <div className="w-1/2 pl-[50px]  hidden  md:block ">
+              <img src={faqImg} alt="" />
+            </div>
+            <div className="w-full md:w-1/2">
+              <FaqList />
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

@@ -1,20 +1,20 @@
 const Stats = () => {
   const stats = [
     {
-      data: "15K+",
-      title: "Patients",
+      data: "+5120",
+      title: "Happy Patients",
     },
     {
-      data: "50",
+      data: "+50",
       title: "Expert Doctors",
     },
     {
-      data: "300+",
+      data: "+300",
       title: "Saved Hearts",
     },
     {
-      data: "10+",
-      title: "Years of Experience",
+      data: "+10",
+      title: "Years Experience",
     },
   ];
   return (

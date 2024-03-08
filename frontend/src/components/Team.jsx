@@ -1,25 +1,7 @@
-import doctor1 from "../assets/images/doctor1.jpg";
-import doctor2 from "../assets/images/doctor2.jpg";
-import doctor3 from "../assets/images/doctor3.jpg";
-const Team = () => {
-  const team = [
-    {
-      avatar: doctor3,
-      name: " Dr. Martiana dialan",
-      specialization: "Surgeon",
-    },
-    {
-      avatar: doctor2,
-      name: "Dr. Micheal colorand",
-      specialization: "Neurologist",
-    },
-    {
-      avatar: doctor1,
-      name: "Dr. Brown Luis",
-      specialization: "Dermatologist",
-    },
-  ];
+import { doctorsTeam } from "./../assets/data/doctors";
+import Star from "../assets/images/Star.png";
 
+const doctors = () => {
   return (
     <section className="py-14">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
@@ -30,17 +12,32 @@ const Team = () => {
         </div>
         <div className="mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-            {team.map((item, idx) => (
+            {doctorsTeam.map((item, idx) => (
               <li key={idx}>
                 <img
-                  src={item.avatar}
-                  className="object-cover rounded-xl aspect-square"
+                  src={item.photo}
+                  className=" object-cover rounded-xl aspect-square"
                   alt=""
                 />
-                <h4 className="text-lg text-gray-700 font-semibold">
+                <h2 className="text-[18px] leading-[30px] lg:text-[26px] lg:leading-9 text-black font-[700]">
                   {item.name}
-                </h4>
-                <p className="text-indigo-600">{item.specialization}</p>
+                </h2>
+                <div className="mt-2 lg:mt-4 flex items-center justify-between">
+                  <span className="bg-heavygreen text-green-900 py-1 px-2 lg:py-2  lg:px-6 text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded">
+                    {item.specialization}
+                  </span>
+                  <div className="flex items-center gap-[6px]">
+                    <span className="flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-black ">
+                      <img src={Star} alt="" />
+                      {item.avgRating}
+                    </span>
+
+                    <span className="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-gray-500">
+                      ({item.totalRating})
+                    </span>
+                  </div>
+                </div>
+                <div className="mt-[18px] lg:mt-5  flex items-center justify-between"></div>
               </li>
             ))}
           </ul>
@@ -50,4 +47,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default doctors;
