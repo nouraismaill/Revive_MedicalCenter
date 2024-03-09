@@ -1,11 +1,11 @@
 import doctorImg1 from "../images/doctor1.jpg";
 import doctorImg2 from "../images/doctor2.jpg";
 import doctorImg3 from "../images/doctor3.jpg";
-import doctorImg4 from "../images/doctor4.jpg";
-import doctorImg5 from "../images/doctor5.jpg";
-import doctorImg6 from "../images/doctor6.jpg";
+import DoctorImg4 from "../images/doctor4.png";
+import DoctorImg5 from "../images/doctor5.jpg";
+import DoctorImg6 from "../images/doctor6.jpg";
 
-export const doctorsTeam = [
+const doctorsTeam = [
   {
     id: "01",
     name: "Dr. Martiana dialan",
@@ -42,7 +42,7 @@ export const doctorsTeam = [
     specialization: "Gynecology",
     avgRating: 4.0,
     totalRating: 100,
-    photo: doctorImg3,
+    photo: DoctorImg4,
     totalPatients: 100,
     hospital: "Mount Adora Hospital, Sylhet.",
   },
@@ -52,7 +52,7 @@ export const doctorsTeam = [
     specialization: "Pediatric Clinic",
     avgRating: 4.8,
     totalRating: 272,
-    photo: doctorImg2,
+    photo: DoctorImg5,
     totalPatients: 1500,
     hospital: "Mount Adora Hospital, Sylhet.",
   },
@@ -62,8 +62,9 @@ export const doctorsTeam = [
     specialization: "Dentist",
     avgRating: 4.8,
     totalRating: 272,
-    photo: doctorImg1,
+    photo: DoctorImg6,
     totalPatients: 1500,
     hospital: "Mount Adora Hospital, Sylhet.",
   },
 ];
+export default doctorsTeam;

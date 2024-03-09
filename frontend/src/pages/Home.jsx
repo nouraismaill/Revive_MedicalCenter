@@ -3,7 +3,7 @@ import doctorImg from "../assets/images/doctor.png";
 import FaqList from "../components/faqList";
 import Team from "../components/Team";
 import { Link } from "react-router-dom";
-
+import Testimonial from "../components/testimonial";
 import faqImg from "../assets/images/faq-img.png";
 
 import Stats from "../components/stats";
@@ -38,6 +38,7 @@ const Home = () => {
       <div className="py-[30px]">
         <Stats />
       </div>
+
       <div>
         <Servicess />
       </div>
@@ -47,13 +48,26 @@ const Home = () => {
       <section>
         <div className="container">
           <div className="flex justify-between gap-[50px] lg:gap-0">
-            <div className="w-1/2 pl-[50px]  hidden  md:block ">
+            <div className="w-1/2 pl-[50px] hidden md:block ">
               <img src={faqImg} alt="" />
             </div>
-            <div className="w-full md:w-1/2">
+            <div className="w-full leading-8  md:w-1/2">
+              <h2 className="text-3xl p-4 ml-1  text-black-800 font-bold">
+                Most questions by our beloved patients
+              </h2>
               <FaqList />
             </div>
           </div>
+        </div>
+      </section>
+      <section className="pt-20 ">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+          <div className="max-w-xl mx-auto sm:text-center">
+            <h3 className="text-3xl font-bold text-center text-black capitalize lg:text-5xl dark:text-white">
+              What our patient <span class="text-bluehavy">say</span>
+            </h3>
+          </div>
+          <Testimonial />
         </div>
       </section>
     </>

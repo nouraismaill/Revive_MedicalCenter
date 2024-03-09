@@ -63,7 +63,7 @@ const StickyNavbar = () => {
     </ul>
   );
   return (
-    <Navbar className="nav sticky top-0 z-0 h-max max-w-full rounded-none px-4 py-2 lg:px-9 lg:py-0">
+    <Navbar className="nav h-max max-w-full bg-white  rounded-none px-4 py-2 lg:px-9 lg:py-0">
       <div className="flex items-center justify-between my-[-20px] text-blue-gray-900">
         <Link to="/">
           <img src={logo} alt="" className="pt-2" width={127} />

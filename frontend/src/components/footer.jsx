@@ -5,7 +5,7 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer class="bg-darkblue">
+    <footer class="bg-darkblue pt-9">
       <div class="container flex flex-col items-center  justify-between px-6 py-8 mx-auto lg:flex-row">
         <a href="/">
           <img class="w-auto h-20" src={logo2} alt="" />

@@ -5,7 +5,7 @@ import doctorImg3 from "../images/doctor3.jpg";
 export const doctorsTeam = [
   {
     id: "01",
-    name: "Dr. Martiana dialan",
+    name: "Dr. Marita dialan",
     specialization: "Surgeon",
     avgRating: 4.8,
     totalRating: 272,
@@ -15,7 +15,7 @@ export const doctorsTeam = [
   },
   {
     id: "02",
-    name: "Dr. Micheal colorand",
+    name: "Dr. Micheal John",
     specialization: "Neurologist",
     avgRating: 4.8,
     totalRating: 272,

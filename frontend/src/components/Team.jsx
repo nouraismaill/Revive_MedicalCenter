@@ -6,12 +6,12 @@ const doctors = () => {
     <section className="py-14">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl mx-auto sm:text-center">
-          <h3 className="text-black pt-2 text-3xl font-semibold sm:text-4xl">
-            Our Experience Doctors
+          <h3 className="text-3xl font-bold text-center text-black capitalize lg:text-5xl dark:text-white">
+            Our Experience <span class="text-bluehavy">Doctors</span>
           </h3>
         </div>
         <div className="mt-12">
-          <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+          <ul className="grid gap-8 sm:grid-cols-3 md:grid-cols-3 ">
             {doctorsTeam.map((item, idx) => (
               <li key={idx}>
                 <img
@@ -19,7 +19,7 @@ const doctors = () => {
                   className=" object-cover rounded-xl aspect-square"
                   alt=""
                 />
-                <h2 className="text-[18px] leading-[30px] lg:text-[26px] lg:leading-9 text-black font-[700]">
+                <h2 className="text-[18px] leading-[30px] lg:text-[26px]  lg:leading-9 text-black font-[700]">
                   {item.name}
                 </h2>
                 <div className="mt-2 lg:mt-4 flex items-center justify-between">

@@ -24,7 +24,7 @@ const Stats = () => {
           <ul className="flex flex-col items-center justify-center gap-y-10 sm:flex-row sm:flex-wrap lg:divide-x">
             {stats.map((item, idx) => (
               <li key={idx} className="text-center px-12 md:px-16">
-                <h4 className="text-5xl text-indigo-600 font-bold">
+                <h4 className="text-5xl leading-[56px] text-indigo-600 font-bold">
                   {item.data}
                 </h4>
                 <p className="mt-3 font-medium">{item.title}</p>
