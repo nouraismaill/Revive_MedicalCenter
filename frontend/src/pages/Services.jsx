@@ -4,15 +4,14 @@ const Services = () => {
   return (
     <section>
       <div class="slider-area2 ">
-        <div class="slider-height2 d-flex align-items-center">
+        <div class="slider-height2  align-items-center">
           <div class="container">
             <div class="row ">
-              <div class="col-xl-12  lg:mx-80 md:mx-40   md:flex-none lg:flex-none space-y-6   sm:max-w-lg md:max-w-md lg:max-w-xl">
-                <div class="hero-cap hero-cap2 text-center">
-                  <h2>Our Services</h2>
+              <div class="col-xl-12  lg:mx-80 md:mx-40  lg:flex-none     lg:max-w-xl">
+                <div class="hero-cap hero-cap2 text-center md:px-8 md:text-[17px]">
+                  <h2 className="md:text-[13px]">Our Services</h2>
                   <p className="breadcrumb-paragraph  ">
-                    It is a broad discipline that includes various branches and
-                    specialties aimed at promoting health and well-being.
+                    Experienced Doctors Across All Specialties
                   </p>
                 </div>
               </div>

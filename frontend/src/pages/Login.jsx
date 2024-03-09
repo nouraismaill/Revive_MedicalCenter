@@ -2,7 +2,7 @@ import React from "react";
 
 const Login = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen light">
+    <div className="flex flex-col items-center pb-20 justify-center h-screen light">
       <form className="form">
         <div className="header">Log in</div>
         <div className="inputs">
