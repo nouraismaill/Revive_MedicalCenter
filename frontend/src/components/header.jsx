@@ -25,11 +25,7 @@ const StickyNavbar = () => {
   const navList = (
     <ul className="mt-0 mb-3 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-blue-800">
       <li className="p-1 font-normal">
-        <NavLink
-          to="/home"
-          className="flex items-center"
-          activeClassName="active"
-        >
+        <NavLink to="/" className="flex items-center" activeClassName="active">
           HOME
         </NavLink>
       </li>

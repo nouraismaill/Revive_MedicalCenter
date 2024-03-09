@@ -13,7 +13,7 @@ const Footer = () => {
 
         <div class=" flex flex-wrap items-center justify-center gap-4 mt-6 lg:gap-6 lg:mt-0">
           <a
-            href="/home"
+            href="/"
             class="text-sm  text-white transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
           >
             HOME
