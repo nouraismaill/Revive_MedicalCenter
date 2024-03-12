@@ -35,9 +35,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className="py-[30px]">
-        <Stats />
-      </div>
 
       <div>
         <Servicess />
@@ -68,6 +65,9 @@ const Home = () => {
             </h3>
           </div>
           <Testimonial />
+        </div>
+        <div>
+          <Stats />
         </div>
       </section>
     </>
