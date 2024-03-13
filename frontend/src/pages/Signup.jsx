@@ -10,7 +10,7 @@ const Signup = () => {
     password: "",
     photo: selectedFile,
     gender: "",
-    age: "",
+
     role: "patient",
   });
   const handleInputChange = (e) => {
@@ -88,19 +88,8 @@ const Signup = () => {
                 >
                   <option value="male">Male</option>
                   <option value="female">Female</option>
-                  <option value="other">Other</option>
                 </select>
-                <label
-                  class="text-sm mb-2 text-gray-900 cursor-pointer"
-                  for="age"
-                >
-                  Age
-                </label>
-                <input
-                  class="bg-gray-100 text-gray-900 border-0 rounded-md p-2"
-                  id="age"
-                  type="date"
-                />
+
                 <div className="mb-5 pt-6 flex items-center gap-3">
                   <figure className="w-[60px] h-[60px] rounded-full border-2 border-solid border-blue-500 flex items-center justify-center">
                     <img src={avatar} alt="" className="w-full rounded-full" />

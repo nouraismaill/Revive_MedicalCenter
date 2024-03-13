@@ -490,30 +490,3 @@ button:hover .button-text {
 .rating > input:checked ~ label {
   color: #ffa723;
 }
-.cssbuttons-io-button {
-  display: flex;
-  align-items: center;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 17px;
-  padding: 0.8em 1.5em 0.8em 1.2em;
-  color: white;
-  background: #ad5389;
-  background: linear-gradient(0deg, rgb(19, 22, 221) 0%, rgb(11, 5, 199) 100%);
-  border: none;
-  box-shadow: 0 0.7em 1.5em -0.5em rgb(203, 205, 231);
-  letter-spacing: 0.08em;
-  border-radius: 20em;
-}
-
-.cssbuttons-io-button svg {
-  margin-right: 9px;
-}
-
-.cssbuttons-io-button:hover {
-  box-shadow: 0 0.5em 1.5em -0.5em rgb(6, 12, 197);
-}
-
-.cssbuttons-io-button:active {
-  box-shadow: 0 0.3em 1em -0.5em rgb(4, 37, 202);
-}
