@@ -5,15 +5,15 @@ import Team from "../components/Team";
 import { Link } from "react-router-dom";
 import Testimonial from "../components/testimonial";
 import faqImg from "../assets/images/faq-img.png";
-
+import heroBanner from "../assets/images/hero-banner.png";
 import Stats from "../components/stats";
 
 const Home = () => {
   return (
     <>
-      <section className=" lg:mt-0  bg-cover 4xl:h-[800px] sm:mt-[2px] bg-center ">
-        <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
-          <div className="flex-none space-y-6 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
+      <section className="  bg-cover 4xl:h-[800px] sm:pt-[5px] bg-center ">
+        <div className=" max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden lg:flex md:grid md:grid-cols-2 sm:mt-9 md:px-8">
+          <div className="flex-none space-y-6 px-4 sm:max-w-lg md:px-0 lg:max-w-xl  sm:ml-[60px] lg:mb-[80px]">
             <h1 className="text-[36px] leading-[46px] text-black font-[700] md:text-[60px] md:leading-[70px]">
               We help patients live a healthy, longer life.
             </h1>
@@ -30,8 +30,12 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
-            <img src={doctorImg} className="max-w-[730px] self-end" alt="" />
+          <div className="flex-none mt-14 md:mt-0 md:max-w-lg  ">
+            <img
+              src={heroBanner}
+              className="max-w-[380px] lg:mx-[20px] lg:my-[-15px] md:mx-[5px] sm:w-[900px] sm:ml-[140px] "
+              alt=""
+            />
           </div>
         </div>
       </section>
