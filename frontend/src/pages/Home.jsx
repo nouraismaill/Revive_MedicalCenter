@@ -1,4 +1,5 @@
 import Servicess from "../components/service";
+import React, { useEffect, useRef } from "react";
 import doctorImg from "../assets/images/doctor.png";
 import FaqList from "../components/faqList";
 import Team from "../components/Team";
@@ -7,14 +8,63 @@ import Testimonial from "../components/testimonial";
 import faqImg from "../assets/images/faq-img.png";
 import heroBanner from "../assets/images/hero-banner.png";
 import Stats from "../components/stats";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+  const elementsRef = useRef([]);
+
+  useEffect(() => {
+    gsap.utils.toArray(".gs_reveal").forEach((elem) => {
+      hide(elem); // Hide the element initially
+
+      ScrollTrigger.create({
+        trigger: elem,
+        onEnter: () => animateFrom(elem),
+        onEnterBack: () => animateFrom(elem, -1),
+        onLeave: () => hide(elem),
+      });
+    });
+  }, []);
+
+  const animateFrom = (elem, direction = 1) => {
+    let x = 0;
+    let y = direction * 100;
+
+    if (elem.classList.contains("gs_reveal_fromLeft")) {
+      x = -100;
+      y = 0;
+    } else if (elem.classList.contains("gs_reveal_fromRight")) {
+      x = 100;
+      y = 0;
+    }
+
+    gsap.fromTo(
+      elem,
+      { x: x, y: y, autoAlpha: 0 },
+      {
+        duration: 1.25,
+        x: 0,
+        y: 0,
+        autoAlpha: 1,
+        ease: "expo",
+        overwrite: "auto",
+      }
+    );
+  };
+
+  const hide = (elem) => {
+    gsap.set(elem, { autoAlpha: 0 });
+  };
+
   return (
     <>
       <section className="  bg-cover 4xl:h-[800px] sm:pt-[5px] bg-center ">
         <div className=" max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden lg:flex md:grid md:grid-cols-2 sm:mt-9 md:px-8">
-          <div className="flex-none space-y-6 px-4 sm:max-w-lg md:px-0 lg:max-w-xl  sm:ml-[60px] lg:mb-[80px]">
-            <h1 className="text-[36px] leading-[46px] text-black font-[700] md:text-[60px] md:leading-[70px]">
+          <div className="gs_reveal gs_reveal_fromLeft flex-none space-y-6 px-4 sm:max-w-lg md:px-0 lg:max-w-xl  sm:ml-[60px] lg:mb-[80px]">
+            <h1 className="gs_reveal ipsType_center text-[36px] leading-[46px] text-black font-[700] md:text-[60px] md:leading-[70px]">
               We help patients live a healthy, longer life.
             </h1>
             <p>
@@ -30,10 +80,10 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex-none mt-14 md:mt-0 md:max-w-lg  ">
+          <div className="gs_reveal gs_reveal_fromRight flex-none mt-14 md:mt-0 md:max-w-lg  ">
             <img
               src={heroBanner}
-              className="max-w-[380px] lg:mx-[20px] lg:my-[-15px] md:mx-[5px] sm:w-[900px] sm:ml-[140px] "
+              className="max-w-[380px] lg:mx-[20px] lg:my-[-15px] md:mx-[5px] sm:w-[900px] sm:ml-[140px]  "
               alt=""
             />
           </div>
