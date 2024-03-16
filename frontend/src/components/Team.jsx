@@ -1,7 +1,18 @@
 import { doctorsTeam } from "./../assets/data/doctors";
+import { useEffect } from "react";
 import Star from "../assets/images/Star.png";
+import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const doctors = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      easing: "ease-in-out",
+      delay: 100,
+    });
+  }, []);
   return (
     <section className="py-14">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
@@ -10,13 +21,17 @@ const doctors = () => {
             Our Experience <span class="text-bluehavy">Doctors</span>
           </h3>
         </div>
-        <div className="mt-12">
+        <div className="  mt-12">
           <ul className="grid gap-8 sm:grid-cols-3 md:grid-cols-3 ">
             {doctorsTeam.map((item, idx) => (
-              <li key={idx}>
+              <li
+                key={idx}
+                className="transition duration-300 ease-in-out hover:scale-110"
+                data-aos="zoom-in"
+              >
                 <img
                   src={item.photo}
-                  className=" object-cover rounded-xl aspect-square"
+                  className=" object-cover rounded-xl aspect-square "
                   alt=""
                 />
                 <h2 className="text-[18px] leading-[30px] lg:text-[26px]  lg:leading-9 text-black font-[700]">

@@ -1,6 +1,81 @@
-import React from "react";
-
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const Services = () => {
+  const boxesRef = useRef([]);
+  useEffect(() => {
+    gsap.utils.toArray(".gs_reveal").forEach((elem) => {
+      hide(elem); // Hide the element initially
+
+      ScrollTrigger.create({
+        trigger: elem,
+        onEnter: () => animateFrom(elem),
+        onEnterBack: () => animateFrom(elem, -1),
+        onLeave: () => hide(elem),
+      });
+    });
+    gsap.defaults({ ease: "power3" }); // Set default ease to power3
+
+    gsap.set(".box", { y: 100 }); // Initial position for the animation
+
+    // Set up ScrollTrigger batch animation
+    ScrollTrigger.batch(boxesRef.current, {
+      onEnter: (batch) =>
+        gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          stagger: { each: 0.15, grid: [1, 3] },
+          overwrite: true,
+        }),
+      onLeave: (batch) =>
+        gsap.set(batch, { opacity: 0, y: -100, overwrite: true }),
+      onEnterBack: (batch) =>
+        gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+      onLeaveBack: (batch) =>
+        gsap.set(batch, { opacity: 0, y: 100, overwrite: true }),
+    });
+
+    // Add refreshInit listener to reset y position temporarily during refresh
+    const refreshInitListener = () => gsap.set(".box", { y: 0 });
+    ScrollTrigger.addEventListener("refreshInit", refreshInitListener);
+
+    // Cleanup function to remove the event listener when the component unmounts
+    return () => {
+      ScrollTrigger.removeEventListener("refreshInit", refreshInitListener);
+    };
+  }, []);
+
+  const animateFrom = (elem, direction = 1) => {
+    let x = 0;
+    let y = direction * 100;
+
+    if (elem.classList.contains("gs_reveal_fromLeft")) {
+      x = -100;
+      y = 0;
+    } else if (elem.classList.contains("gs_reveal_fromRight")) {
+      x = 100;
+      y = 0;
+    }
+
+    gsap.fromTo(
+      elem,
+      { x: x, y: y, autoAlpha: 0 },
+      {
+        duration: 1.5,
+        x: 0,
+        y: 0,
+        autoAlpha: 1,
+        ease: "expo",
+        overwrite: "auto",
+      }
+    );
+  };
+
+  const hide = (elem) => {
+    gsap.set(elem, { autoAlpha: 0 });
+  };
+
   return (
     <section>
       <div class="slider-area2 ">
@@ -19,7 +94,10 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-1 mx-6 pb-7 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-3 xl:grid-cols-3">
+      <div
+        class="  grid grid-cols-1 mx-6 pb-7 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-3 xl:grid-cols-3"
+        ref={(el) => boxesRef.current.push(el)}
+      >
         <div class="flex flex-col items-center p-6 space-y-3 text-center bg-babyblue rounded-xl dark:bg-gray-800">
           <span class="inline-block  p-5  text-blue-500  bg-blue-500 rounded-full  dark:text-white dark:bg-blue-500">
             <img
@@ -38,12 +116,6 @@ const Services = () => {
             Objectively integrate enterprise-wide strategic theme areas with
             functionalized infrastructures.
           </p>
-          <button class="learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Read More</span>
-          </button>
         </div>
 
         <div class=" flex flex-col items-center p-6 space-y-3 text-center bg-babyblue rounded-xl dark:bg-gray-800">
@@ -64,12 +136,6 @@ const Services = () => {
             Interactively productize premium technologies where interdependent
             quality vectors available.
           </p>
-          <button class="learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Read More</span>
-          </button>
         </div>
 
         <div class="flex flex-col items-center p-6 space-y-3 text-center  bg-babyblue rounded-xl dark:bg-gray-800">
@@ -90,12 +156,6 @@ const Services = () => {
             Quickly communicate enabled technology and turnkey leadership skills
             for the doctor.
           </p>
-          <button class="learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Read More</span>
-          </button>
         </div>
         <div class="flex flex-col items-center p-6 space-y-3 text-center  bg-babyblue rounded-xl dark:bg-gray-800">
           <span class="inline-block p-5 text-blue-500 bg-blue-500  rounded-full dark:text-white dark:bg-blue-500">
@@ -115,12 +175,6 @@ const Services = () => {
             Quickly communicate enabled technology and turnkey leadership skills
             for the doctor.
           </p>
-          <button class="learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Read More</span>
-          </button>
         </div>
         <div class="flex flex-col items-center p-6 space-y-3 text-center  bg-babyblue rounded-xl dark:bg-gray-800">
           <span class="inline-block p-5 text-blue-500 bg-blue-500  rounded-full dark:text-white dark:bg-blue-500">
@@ -140,12 +194,6 @@ const Services = () => {
             Quickly communicate enabled technology and turnkey leadership skills
             for the doctor.
           </p>
-          <button class="learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Read More</span>
-          </button>
         </div>
         <div class="flex flex-col items-center p-6 space-y-3 text-center  bg-babyblue rounded-xl dark:bg-gray-800">
           <span class="inline-block p-5 text-blue-500 bg-blue-500  rounded-full dark:text-white dark:bg-blue-500">
@@ -165,12 +213,6 @@ const Services = () => {
             Quickly communicate enabled technology and turnkey leadership skills
             for the doctor.
           </p>
-          <button class="learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Read More</span>
-          </button>
         </div>
         <div class="flex flex-col items-center p-6 space-y-3 text-center  bg-babyblue rounded-xl dark:bg-gray-800">
           <span class="inline-block p-5 text-blue-500 bg-blue-500  rounded-full dark:text-white dark:bg-blue-500">
@@ -190,12 +232,6 @@ const Services = () => {
             Quickly communicate enabled technology and turnkey leadership skills
             for the doctor.
           </p>
-          <button class="learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Read More</span>
-          </button>
         </div>
         <div class="flex flex-col items-center p-6 space-y-3 text-center  bg-babyblue rounded-xl dark:bg-gray-800">
           <span class="inline-block p-5 text-blue-500 bg-blue-500  rounded-full dark:text-white dark:bg-blue-500">
@@ -215,12 +251,6 @@ const Services = () => {
             Quickly communicate enabled technology and turnkey leadership skills
             for the doctor.
           </p>
-          <button class="learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Read More</span>
-          </button>
         </div>
         <div class="flex flex-col items-center p-6 space-y-3 text-center  bg-babyblue rounded-xl dark:bg-gray-800">
           <span class="inline-block p-5 text-blue-500 bg-blue-500  rounded-full dark:text-white dark:bg-blue-500">
@@ -240,12 +270,6 @@ const Services = () => {
             Quickly communicate enabled technology and turnkey leadership skills
             for the doctor.
           </p>
-          <button class="learn-more">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-            </span>
-            <span class="button-text">Read More</span>
-          </button>
         </div>
       </div>
     </section>

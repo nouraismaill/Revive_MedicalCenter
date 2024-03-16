@@ -3,195 +3,153 @@ import React from "react";
 const Contact = () => {
   return (
     <section>
-      <div class="slider-area2 ">
-        <div class="slider-height2 d-flex align-items-center">
-          <div class="container">
-            <div class="row ">
-              <div class="col-xl-12  lg:mx-80 md:mx-40   md:flex-none lg:flex-none space-y-6   sm:max-w-lg md:max-w-md lg:max-w-xl">
-                <div class="hero-cap hero-cap2 text-center">
-                  <h2>Contact Us</h2>
-                  <p className="breadcrumb-paragraph  ">
-                    We Are Ready To Assist You In 24x7
-                  </p>
+      <div class="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
+        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+          <div class="mt-8 overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="p-6 mr-2 bg-[#FFFFFF] dark:bg-gray-800 sm:rounded-lg">
+                <h1 class="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
+                  Get in touch
+                </h1>
+                <p class="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
+                  Fill in the form to start a conversation
+                </p>
+
+                <div class="flex items-center mt-8 text-gray-600 dark:text-gray-400"></div>
+                <div className="leading-9 ">
+                  <div className="flex items-center mt-2 ">
+                    <span class="inline-block  p-5  text-blue-500  bg-blue-500 rounded-full  dark:text-white dark:bg-blue-500">
+                      <img
+                        src="https://uploads-ssl.webflow.com/6377548db7a796209f44fc12/638dbf8dac558a051780664e_phone-call.svg"
+                        loading="lazy"
+                        alt="call-img"
+                        width="33"
+                      />
+                    </span>
+                    <div class="contact-info">
+                      <h3 className="ml-4 tracking-wide text-[20px] font-bold w-40">
+                        Call us
+                      </h3>
+                      <a
+                        href="tel:+227-300-3676"
+                        className="ml-4 text-md tracking-wide font-semibold w-40  text-gray-600 dark:text-gray-400"
+                      >
+                        +227-300-3676
+                      </a>
+                      <a
+                        href="tel:+227-300-3676"
+                        className="ml-4 text-md tracking-wide font-semibold w-40  text-gray-600 dark:text-gray-400"
+                      >
+                        +227-300-3676
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-center mt-4 ">
+                    <span class="inline-block  p-5  text-blue-500  bg-blue-500 rounded-full  dark:text-white dark:bg-blue-500">
+                      <img
+                        src="	https://uploads-ssl.webflow.com/6377548db7a796209f44fc12/63996292dbae1bb25aeba0f5_email.svg"
+                        loading="lazy"
+                        alt="email-img"
+                        width="33"
+                      />
+                    </span>
+                    <div class="contact-info">
+                      <h3 className="ml-4 tracking-wide text-[20px] font-bold w-40">
+                        Call us
+                      </h3>
+                      <a
+                        href="tel:+227-300-3676"
+                        className="ml-4 text-md tracking-wide font-semibold w-40  text-gray-600 dark:text-gray-400"
+                      >
+                        +227-300-3676
+                      </a>
+                      <a
+                        href="tel:+227-300-3676"
+                        className="ml-4 text-md tracking-wide font-semibold w-40  text-gray-600 dark:text-gray-400"
+                      >
+                        +227-300-3676
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-center mt-4 ">
+                    <span class="inline-block  p-5  text-blue-500  bg-blue-500 rounded-full   dark:text-white dark:bg-blue-500">
+                      <img
+                        src="https://uploads-ssl.webflow.com/6377548db7a796209f44fc12/638dbd7cbf262e5ba631d32a_location.svg"
+                        loading="lazy"
+                        alt="address-img"
+                        width="25"
+                      />
+                    </span>
+                    <div class="contact-info">
+                      <h3 className="ml-4 tracking-wide text-[20px] font-bold w-40">
+                        Call us
+                      </h3>
+                      <a
+                        href="tel:+227-300-3676"
+                        className="ml-4 text-md tracking-wide font-semibold w-40  text-gray-600 dark:text-gray-400"
+                      >
+                        +227-300-3676
+                      </a>
+                      <a
+                        href="tel:+227-300-3676"
+                        className="ml-4 text-md tracking-wide font-semibold w-40  text-gray-600 dark:text-gray-400"
+                      >
+                        +227-300-3676
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div class="mb-4">
-          <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-            <p class="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200">
-              Contact
-            </p>
-            <h2 class="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl">
-              Get in Touch
-            </h2>
-            <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">
-              In hac habitasse platea dictumst
-            </p>
-          </div>
-        </div>
-        <div class="flex items-stretch justify-center">
-          <div class="grid md:grid-cols-2">
-            <div class="h-full pr-6">
-              <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
-                Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut
-                scelerisque sagittis ante, ac tincidunt sem venenatis ut.
-              </p>
-              <ul class="mb-6 md:mb-0">
-                <li class="flex">
-                  <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="h-6 w-6"
-                    >
-                      <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                      <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-                    </svg>
-                  </div>
-                  <div class="ml-4 mb-4">
-                    <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">
-                      Our Address
-                    </h3>
-                    <p class="text-gray-600 dark:text-slate-400">
-                      1230 Maecenas Street Donec Road
-                    </p>
-                    <p class="text-gray-600 dark:text-slate-400">
-                      New York, EEUU
-                    </p>
-                  </div>
-                </li>
-                <li class="flex">
-                  <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="h-6 w-6"
-                    >
-                      <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
-                      <path d="M15 7a2 2 0 0 1 2 2"></path>
-                      <path d="M15 3a6 6 0 0 1 6 6"></path>
-                    </svg>
-                  </div>
-                  <div class="ml-4 mb-4">
-                    <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">
-                      Contact
-                    </h3>
-                    <p class="text-gray-600 dark:text-slate-400">
-                      Mobile: +1 (123) 456-7890
-                    </p>
-                    <p class="text-gray-600 dark:text-slate-400">
-                      Mail: tailnext@gmail.com
-                    </p>
-                  </div>
-                </li>
-                <li class="flex">
-                  <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="h-6 w-6"
-                    >
-                      <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                      <path d="M12 7v5l3 3"></path>
-                    </svg>
-                  </div>
-                  <div class="ml-4 mb-4">
-                    <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">
-                      Working hours
-                    </h3>
-                    <p class="text-gray-600 dark:text-slate-400">
-                      Monday - Friday: 08:00 - 17:00
-                    </p>
-                    <p class="text-gray-600 dark:text-slate-400">
-                      Saturday &amp; Sunday: 08:00 - 12:00
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="card h-fit max-w-6xl p-5 md:p-12" id="form">
-              <h2 class="mb-4 text-2xl font-bold">Ready to Get Started?</h2>
-              <form id="contactForm">
-                <div class="mb-6">
-                  <div class="mx-0 mb-1 sm:mb-4">
-                    <div class="mx-0 mb-1 sm:mb-4">
-                      <label
-                        for="name"
-                        class="pb-1 text-xs uppercase tracking-wider"
-                      ></label>
-                      <input
-                        type="text"
-                        id="name"
-                        autocomplete="given-name"
-                        placeholder="Your name"
-                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                        name="name"
-                      />
-                    </div>
-                    <div class="mx-0 mb-1 sm:mb-4">
-                      <label
-                        for="email"
-                        class="pb-1 text-xs uppercase tracking-wider"
-                      ></label>
-                      <input
-                        type="email"
-                        id="email"
-                        autocomplete="email"
-                        placeholder="Your email address"
-                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                        name="email"
-                      />
-                    </div>
-                  </div>
-                  <div class="mx-0 mb-1 sm:mb-4">
-                    <label
-                      for="textarea"
-                      class="pb-1 text-xs uppercase tracking-wider"
-                    ></label>
-                    <textarea
-                      id="textarea"
-                      name="textarea"
-                      cols="30"
-                      rows="5"
-                      placeholder="Write your message..."
-                      class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                    ></textarea>
-                  </div>
+
+              <form
+                action="https://fabform.io/f/xxxxx"
+                method="post"
+                class="p-6 flex flex-col justify-center bg-[#F4F6F9]"
+              >
+                <div class="flex flex-col">
+                  <label for="name" class="hidden">
+                    Full Name
+                  </label>
+                  <input
+                    type="name"
+                    name="name"
+                    id="name"
+                    placeholder="Full Name"
+                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                  />
                 </div>
-                <div class="text-center">
-                  <button
-                    type="submit"
-                    class="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0"
-                  >
-                    Send Message
-                  </button>
+
+                <div class="flex flex-col mt-2">
+                  <label for="email" class="hidden">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                  />
                 </div>
+
+                <div class="flex flex-col mt-2">
+                  <label for="message" class="hidden">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Your Message"
+                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="md:w-32 bg-[#2196F3] text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300"
+                >
+                  Submit
+                </button>
               </form>
             </div>
           </div>

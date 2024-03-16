@@ -2,6 +2,7 @@ import Servicess from "../components/service";
 import React, { useEffect, useRef } from "react";
 import doctorImg from "../assets/images/doctor.png";
 import FaqList from "../components/faqList";
+import doctorr from "../assets/images/doctorr.jpg";
 import Team from "../components/Team";
 import { Link } from "react-router-dom";
 import Testimonial from "../components/testimonial";
@@ -89,7 +90,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      <div>
+        <Stats />
+      </div>
       <div>
         <Servicess />
       </div>
@@ -99,11 +102,11 @@ const Home = () => {
       <section>
         <div className="container">
           <div className="flex justify-between gap-[50px] lg:gap-0">
-            <div className="w-1/2 pl-[50px] hidden md:block ">
-              <img src={faqImg} alt="" />
+            <div className="w-1/2  lg:block md:hidden sm:hidden ">
+              <img src={doctorr} className="mx-[-130px]" alt="" />
             </div>
             <div className="w-full leading-8  md:w-1/2">
-              <h2 className="text-3xl p-4 ml-1  text-black-800 font-bold">
+              <h2 className="text-3xl p-4  mt-7 ml-1  text-black-800 font-bold">
                 Most questions by our beloved patients
               </h2>
               <FaqList />
@@ -119,9 +122,6 @@ const Home = () => {
             </h3>
           </div>
           <Testimonial />
-        </div>
-        <div>
-          <Stats />
         </div>
       </section>
     </>
