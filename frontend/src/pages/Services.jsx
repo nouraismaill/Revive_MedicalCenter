@@ -1,8 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 gsap.registerPlugin(ScrollTrigger);
 const Services = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      easing: "ease-in-out",
+      delay: 100,
+    });
+  }, []);
   const boxesRef = useRef([]);
   useEffect(() => {
     gsap.utils.toArray(".gs_reveal").forEach((elem) => {
@@ -96,7 +106,7 @@ const Services = () => {
       </div>
       <div
         class="  grid grid-cols-1 mx-6 pb-7 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-3 xl:grid-cols-3"
-        ref={(el) => boxesRef.current.push(el)}
+        data-aos="zoom-in"
       >
         <div class="flex flex-col items-center p-6 space-y-3 text-center bg-babyblue rounded-xl dark:bg-gray-800">
           <span class="inline-block  p-5  text-blue-500  bg-blue-500 rounded-full  dark:text-white dark:bg-blue-500">

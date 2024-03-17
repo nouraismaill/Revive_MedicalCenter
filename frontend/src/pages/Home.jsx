@@ -75,7 +75,7 @@ const Home = () => {
               difference today!
             </p>
             <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0 ">
-              <a href="/doctors" className=" btn ">
+              <a href="/contact" className=" btn ">
                 Book Appointment
               </a>
             </div>

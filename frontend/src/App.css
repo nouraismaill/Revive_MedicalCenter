@@ -254,7 +254,7 @@ button:hover .button-text {
   background-color: #fff;
   color: rgb(97 97 97);
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05);
-  width: 22rem;
+  width: 23rem;
   background-clip: border-box;
 }
 
@@ -263,13 +263,14 @@ button:hover .button-text {
   background-clip: border-box;
   background-color: #1e88e5;
   background-image: linear-gradient(to top right, #1e88e5, #42a5f5);
-  margin: 10px;
+  margin: 15px;
+
   border-radius: 0.75rem;
   overflow: hidden;
   color: #fff;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000,
     rgba(33, 150, 243, 0.4);
-  height: 7rem;
+  height: 5.5rem;
   letter-spacing: 0;
   line-height: 1.375;
   font-weight: 600;
