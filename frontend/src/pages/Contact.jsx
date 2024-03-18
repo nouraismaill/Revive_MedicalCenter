@@ -110,7 +110,7 @@ const Contact = () => {
                     name="name"
                     id="name"
                     placeholder="Full Name"
-                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-700 border border-gray-700 dark:border-gray-700 text-gray-700 font-semibold focus:border-indigo-500 focus:outline-none"
+                    class="input-style mt-2 py-3 px-3"
                   />
                 </div>
 
@@ -123,7 +123,7 @@ const Contact = () => {
                     name="email"
                     id="email"
                     placeholder="Email"
-                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                    class=" input-style mt-2 py-3 px-3 "
                   />
                 </div>
                 <div className="flex flex-col mt-4  ">
@@ -132,7 +132,7 @@ const Contact = () => {
                     name="Category-2"
                     required=""
                     id="field"
-                    class="form-dropdown w-select w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-600 font-semibold focus:border-indigo-500 focus:outline-none"
+                    class="input-style mt-2 py-3 px-3  "
                     fdprocessedid="132ysh"
                   >
                     <option value="">Select one...</option>
@@ -145,7 +145,7 @@ const Contact = () => {
                 </div>
                 <div class="flex flex-col mt-2">
                   <input
-                    class="text-input w-input w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-600 font-semibold focus:border-indigo-500 focus:outline-none"
+                    className="input-style mt-2 py-3 px-3 "
                     maxlength="256"
                     name="Phone-Number"
                     data-name="Phone Number"
@@ -156,14 +156,14 @@ const Contact = () => {
                   ></input>
                 </div>
                 <div class="flex flex-col mt-2">
-                  <label for="Information" class="hidden">
+                  <label for="Information" class="hidden  ">
                     Additional Information
                   </label>
                   <textarea
                     name="Information"
                     id="Information"
                     placeholder="Additional Information"
-                    class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                    class="input-style mt-2 py-3 px-3   "
                   ></textarea>
                 </div>
 

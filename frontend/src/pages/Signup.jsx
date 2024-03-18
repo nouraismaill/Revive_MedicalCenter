@@ -35,7 +35,7 @@ const Signup = () => {
                   value={formData.name}
                   name="name"
                   onChange={handleInputChange}
-                  class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4  focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  class="input-style  p-2 mb-4 "
                   type="text"
                   required
                 />
@@ -45,7 +45,7 @@ const Signup = () => {
                   value={formData.email}
                   name="email"
                   onChange={handleInputChange}
-                  class="bg-gray-100  text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  class="input-style p-2 mb-4 "
                   type="email"
                   required
                 />
@@ -55,7 +55,7 @@ const Signup = () => {
                   value={formData.password}
                   name="password"
                   onChange={handleInputChange}
-                  class="bg-gray-100  text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  class="input-style p-2 mb-4 "
                   type="password"
                   required
                 />
@@ -68,7 +68,7 @@ const Signup = () => {
                   Are you a
                 </label>
                 <select
-                  class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  class="input-style p-2 mb-4 "
                   name="role"
                   value={formData.role}
                   onChange={handleInputChange}
@@ -82,10 +82,7 @@ const Signup = () => {
                 >
                   Gender
                 </label>
-                <select
-                  class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                  id="gender"
-                >
+                <select class="input-style p-2 mb-4" id="gender">
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select>
