@@ -91,11 +91,7 @@ const Servicess = () => {
           </div>
         </div>
       </div>
-      <div
-        className=" centered-container "
-        data-aos="zoom-in-up"
-        data-aos-duration="2000"
-      >
+      <div className=" centered-container ">
         <a href="/services">
           <button className="allservices bg-[#28AADC] text-white" type="button">
             VIEW ALL SERVICES

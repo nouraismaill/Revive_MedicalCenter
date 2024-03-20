@@ -1,12 +1,12 @@
 import Servicess from "../components/service";
 import React, { useEffect, useRef } from "react";
-import doctorImg from "../assets/images/doctor.png";
+
 import FaqList from "../components/faqList";
 import doctorr from "../assets/images/doctorr.jpg";
 import Team from "../components/Team";
 import { Link } from "react-router-dom";
 import Testimonial from "../components/testimonial";
-import faqImg from "../assets/images/faq-img.png";
+import About from "../components/about";
 import heroBanner from "../assets/images/hero-banner.png";
 import Stats from "../components/stats";
 import { gsap } from "gsap";
@@ -99,6 +99,9 @@ const Home = () => {
       <div className="pt-0">
         <Team />
       </div>
+      <div className="pt-[0]">
+        <About />
+      </div>
       <section>
         <div className="container">
           <div className="flex justify-between gap-[50px] lg:gap-0">
@@ -109,6 +112,7 @@ const Home = () => {
               <h2 className="text-3xl p-4  mt-7 ml-1  text-black-800 font-bold">
                 Most questions by our beloved patients
               </h2>
+
               <FaqList />
             </div>
           </div>

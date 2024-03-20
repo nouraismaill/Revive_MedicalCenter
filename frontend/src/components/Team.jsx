@@ -15,14 +15,14 @@ const doctors = () => {
     });
   }, []);
   return (
-    <section className="py-14">
+    <section className="py-14 ">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl mx-auto sm:text-center">
           <h3 className="text-3xl font-bold text-center text-black capitalize lg:text-5xl dark:text-white">
             Our Experience <span class="text-bluehavy">Doctors</span>
           </h3>
         </div>
-        <div className="  mt-12">
+        <div className="mt-12 mb-[-100px]">
           <ul className="grid gap-8 sm:grid-cols-3 md:grid-cols-3 ">
             {doctorsTeam.map((item, idx) => (
               <li
