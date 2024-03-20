@@ -536,13 +536,3 @@ button:hover .button-text {
   color: var(--bs-body-color);
   opacity: 1;
 }
-
-.ezy__testimonial1-rating [class*="fa-"]:not(.active),
-.ezy__testimonial1-rating [class*="fa-"]:not(.active) * {
-  color: rgba(var(--ezy-rating-rgb), 0.2);
-}
-
-.ezy__testimonial1-rating [class*="fa-"].active,
-.ezy__testimonial1-rating [class*="fa-"].active * {
-  color: rgba(var(--ezy-rating-rgb), 1);
-}
