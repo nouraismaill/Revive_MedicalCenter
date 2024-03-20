@@ -35,7 +35,7 @@ const Signup = () => {
                   value={formData.name}
                   name="name"
                   onChange={handleInputChange}
-                  class="input-style  p-2 mb-4 "
+                  class="input-style  p-2 mb-4  "
                   type="text"
                   required
                 />

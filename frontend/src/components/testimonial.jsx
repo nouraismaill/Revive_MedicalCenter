@@ -1,97 +1,119 @@
-import { useState, useEffect } from "react";
+import React, { Fragment } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
+import classNames from "classnames";
+import PropTypes from "prop-types";
+
+const testimonialList = [
+  {
+    author: {
+      fullName: "Akshay Kumar",
+      picture: "https://cdn.easyfrontend.com/pictures/users/user2.jpg",
+      designation: "Founder / CEO",
+    },
+    rating: 3.5,
+    description:
+      "This is a factor in the economy of a nation, and the administration takes the major choices.This is a factor of a nation.",
+  },
+  {
+    author: {
+      fullName: "Raima Sen",
+      picture: "https://cdn.easyfrontend.com/pictures/users/user3.jpg",
+      designation: "Business Head",
+    },
+    rating: 3.8,
+    description:
+      "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis qui.",
+  },
+  {
+    author: {
+      fullName: "Arjun Kapur",
+      picture: "https://cdn.easyfrontend.com/pictures/users/user27.jpg",
+      designation: "UI Design",
+    },
+    rating: 4.5,
+    description:
+      "When it comes to booking a holiday, we know everyone likes something different - so we've designed our getaways with you in mind.",
+  },
+];
+
+const Rating = ({ rating, showLabel, className, ...rest }) => (
+  <p className={classNames("mb-6", className)} {...rest}>
+    <span>
+      {[...Array(5)].map((_, i) => {
+        const index = i + 1;
+        let content = "";
+        if (index <= Math.floor(rating))
+          content = (
+            <FontAwesomeIcon icon={faStar} className="text-yellow-500" />
+          );
+        else if (rating > i && rating < index + 1)
+          content = (
+            <FontAwesomeIcon icon={faStarHalfAlt} className="text-yellow-500" />
+          );
+        else if (index > rating)
+          content = (
+            <FontAwesomeIcon
+              icon={faStar}
+              className="text-yellow-200 dark:text-opacity-20"
+            />
+          );
+
+        return <Fragment key={i}>{content}</Fragment>;
+      })}
+    </span>
+    {showLabel && <span>{rating.toFixed(1)}</span>}
+  </p>
+);
+
+Rating.propTypes = {
+  rating: PropTypes.number.isRequired,
+  showLabel: PropTypes.bool,
+  className: PropTypes.string,
+};
+
+const TestimonialItem = ({ testimonial }) => (
+  <div className=" duration-300 h-full p-6 ezy__testimonial1-item  ">
+    <div className="mt-4 ">
+      <Rating rating={testimonial.rating} showLabel={false} />
+      <p className="opacity-50 mb-6">{testimonial.description}</p>
+      <div className="flex items-center ezy__testimonial1-content">
+        <div className="mr-2">
+          <img
+            src={testimonial.author.picture}
+            alt={testimonial.author.fullName}
+            className="max-w-full h-auto rounded-full border"
+            width="47"
+          />
+        </div>
+        <div>
+          <h4 className="text-xl font-medium">{testimonial.author.fullName}</h4>
+          <p className="text-sm">
+            <i>{testimonial.author.designation}</i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+TestimonialItem.propTypes = {
+  testimonial: PropTypes.object.isRequired,
+};
 
 const Testimonial = () => {
-  const testimonials = [
-    {
-      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-      name: "Martin escobar",
-      title: "Founder of meta",
-      quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et est hendrerit, porta nunc vitae, gravida justo. Nunc fermentum magna lorem, euismod volutpat arcu volutpat et.",
-    },
-    {
-      avatar: "https://randomuser.me/api/portraits/women/79.jpg",
-      name: "Angela stian",
-      title: "Product designer",
-      quote:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout, that the point of using Lorem Ipsum.",
-    },
-    {
-      avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-      name: "Karim ahmed",
-      title: "DevOp engineer",
-      quote:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati ",
-    },
-  ];
-
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [scrollEnabled, setScrollEnabled] = useState(false);
-
-  useEffect(() => {
-    const container = document.querySelector(".testimonial-container");
-    if (container) {
-      setScrollEnabled(container.scrollHeight > container.clientHeight);
-    }
-  }, [testimonials, currentTestimonial]);
-
   return (
-    <section className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <div
-            className={`testimonial-container overflow-hidden ${
-              scrollEnabled ? "overflow-y-auto" : ""
-            }`}
-          >
-            <ul className="p-0">
-              {testimonials.map((item, idx) =>
-                currentTestimonial === idx ? (
-                  <li key={idx}>
-                    <figure>
-                      <blockquote>
-                        <p className="text-gray-800 text-xl font-semibold sm:text-2xl">
-                          “{item.quote}“
-                        </p>
-                      </blockquote>
-                      <div className="mt-6">
-                        <img
-                          src={item.avatar}
-                          className="w-16 h-16 mx-auto rounded-full"
-                        />
-                        <div className="mt-3">
-                          <span className="block text-gray-800 font-semibold">
-                            {item.name}
-                          </span>
-                          <span className="block text-gray-600 text-sm mt-0.5">
-                            {item.title}
-                          </span>
-                        </div>
-                      </div>
-                    </figure>
-                  </li>
-                ) : null
-              )}
-            </ul>
-          </div>
-        </div>
-        <div className="mt-6">
-          <ul className="flex gap-x-3 justify-center">
-            {testimonials.map((item, idx) => (
-              <li key={idx}>
-                <button
-                  className={`w-2.5 h-2.5 rounded-full duration-150 ring-offset-2 ring-indigo-600 focus:ring ${
-                    currentTestimonial === idx ? "bg-indigo-600" : "bg-gray-300"
-                  }`}
-                  onClick={() => setCurrentTestimonial(idx)}
-                ></button>
-              </li>
-            ))}
-          </ul>
+    <section className="ezy__testimonial1 light py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
+      <div className=" container px-4 mx-auto">
+        <div className="grid grid-cols-6 gap-6 pt-8 ">
+          {testimonialList.map((testimonial, i) => (
+            <div className="col-span-6 md:col-span-3 lg:col-span-2 " key={i}>
+              <TestimonialItem testimonial={testimonial} />
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
-
 export default Testimonial;

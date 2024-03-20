@@ -103,7 +103,7 @@ const Home = () => {
         <div className="container">
           <div className="flex justify-between gap-[50px] lg:gap-0">
             <div className="w-1/2  lg:block md:hidden sm:hidden ">
-              <img src={doctorr} className="mx-[-130px]" alt="" />
+              <img src={doctorr} className=" my-[-36px]  mx-[-130px]" alt="" />
             </div>
             <div className="w-full leading-8  md:w-1/2">
               <h2 className="text-3xl p-4  mt-7 ml-1  text-black-800 font-bold">
@@ -114,9 +114,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="pt-20 ">
+      <section className="pt-40 ">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-          <div className="max-w-xl mx-auto sm:text-center">
+          <div className="mb-[-50px] max-w-xl mx-auto sm:text-center">
             <h3 className="text-3xl font-bold text-center text-black capitalize lg:text-5xl dark:text-white">
               What our patient <span class="text-bluehavy">say</span>
             </h3>
