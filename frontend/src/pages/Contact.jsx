@@ -88,7 +88,7 @@ const Contact = () => {
                       <h3 class="tracking-wide text-[20px] font-bold w-40  mt-8 ">
                         Our Location
                       </h3>
-                      <p class="text-md tracking-wide font-semibold w-40 text-gray-600 dark:text-gray-400 hover:text-blue-500 leading-6 ">
+                      <p class="  leading-7 text-md tracking-wide font-semibold w-40 text-gray-600 dark:text-gray-400 hover:text-blue-500  ">
                         NO.09A, DOWNTOWN, SAN DIEAGO, USA
                       </p>
                     </div>

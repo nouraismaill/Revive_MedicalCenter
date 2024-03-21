@@ -536,3 +536,10 @@ button:hover .button-text {
   color: var(--bs-body-color);
   opacity: 1;
 }
+.faq {
+  border-radius: 12px;
+  grid-area: auto;
+  line-height: 32px;
+  margin: 48px 0px 0px;
+  padding: 20px;
+}

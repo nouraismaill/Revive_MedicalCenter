@@ -98,11 +98,11 @@ const Home = () => {
         <Team />
       </div>
 
-      <section>
-        <div className="container">
-          <div className="flex justify-between gap-[50px] lg:gap-0">
-            <div className="w-1/2 hidden  lg:block  ">
-              <img src={doctorr} className=" mt-[50px]  mx-[-100px]" alt="" />
+      <section className="leading-[24px]">
+        <div className="container ">
+          <div className="flex justify-between gap-[50px] lg:gap-0 ">
+            <div className="w-1/2 hidden  lg:block leading-[24px]  ">
+              <img src={doctorr} className="  mt-[50px]   mx-[-100px]" alt="" />
             </div>
             <div className="w-full leading-8  md:w-1/2">
               <FaqList />
