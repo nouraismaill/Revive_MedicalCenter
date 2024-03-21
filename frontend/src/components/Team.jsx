@@ -23,7 +23,7 @@ const doctors = () => {
           </h3>
         </div>
         <div className="mt-12 mb-[-100px]">
-          <ul className="grid gap-8 sm:grid-cols-3 md:grid-cols-3 ">
+          <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 ">
             {doctorsTeam.map((item, idx) => (
               <li
                 key={idx}
@@ -32,7 +32,7 @@ const doctors = () => {
               >
                 <img
                   src={item.photo}
-                  className=" object-cover rounded-xl aspect-square "
+                  className=" object-cover rounded-xl aspect-square  "
                   alt=""
                 />
                 <h2 className="text-[18px] leading-[30px] lg:text-[26px]  lg:leading-9 text-black font-[700]">

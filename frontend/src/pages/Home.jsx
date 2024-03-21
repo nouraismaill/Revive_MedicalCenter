@@ -6,7 +6,7 @@ import doctorr from "../assets/images/doctorr.jpg";
 import Team from "../components/Team";
 import { Link } from "react-router-dom";
 import Testimonial from "../components/testimonial";
-import About from "../components/about";
+
 import heroBanner from "../assets/images/hero-banner.png";
 import Stats from "../components/stats";
 import { gsap } from "gsap";
@@ -90,35 +90,28 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div>
-        <Stats />
-      </div>
+
       <div>
         <Servicess />
       </div>
-      <div className="pt-0">
+      <div className="pt-0  pb-16">
         <Team />
       </div>
-      <div className="pt-[0]">
-        <About />
-      </div>
+
       <section>
         <div className="container">
           <div className="flex justify-between gap-[50px] lg:gap-0">
-            <div className="w-1/2  lg:block md:hidden sm:hidden ">
-              <img src={doctorr} className=" my-[-36px]  mx-[-130px]" alt="" />
+            <div className="w-1/2 hidden  lg:block  ">
+              <img src={doctorr} className=" mt-[50px]  mx-[-100px]" alt="" />
             </div>
             <div className="w-full leading-8  md:w-1/2">
-              <h2 className="text-3xl p-4  mt-7 ml-1  text-black-800 font-bold">
-                Most questions by our beloved patients
-              </h2>
-
               <FaqList />
             </div>
           </div>
         </div>
       </section>
-      <section className="pt-40 ">
+
+      <section className="pt-20">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8">
           <div className="mb-[-50px] max-w-xl mx-auto sm:text-center">
             <h3 className="text-3xl font-bold text-center text-black capitalize lg:text-5xl dark:text-white">
@@ -128,6 +121,9 @@ const Home = () => {
           <Testimonial />
         </div>
       </section>
+      <div className="bg-[#4193ff]">
+        <Stats />
+      </div>
     </>
   );
 };

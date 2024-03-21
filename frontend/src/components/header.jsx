@@ -126,8 +126,8 @@ const StickyNavbar = () => {
       </div>
       <MobileNav open={openNav}>
         {navList}
-        <div className="flex items-center gap-x-1">
-          <Button fullWidth variant="text" className="">
+        <div className="flex items-center gap-x-1  ">
+          <Button fullWidth variant="text">
             <Link to="/login">
               <span>Log In</span>
             </Link>
