@@ -3,7 +3,8 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-
+import userRoute from "./Routes/user.js";
+import doctorRoute from "./Routes/doctors.js";
 import authRoute from "./Routes/auth.js";
 dotenv.config();
 const app = express();
@@ -27,6 +28,8 @@ app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/users", userRoute);
+app.use("/api/v1/doctors", doctorRoute);
 app.listen(port, () => {
   connectDB();
   console.log(`Server running on port ${port}`);
