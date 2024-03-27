@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import Doctor from "../models/DoctorSchema.js";
 import User from "../models/PatientSchema.js";
-const authenticate = async (req, res, next) => {
+export const authenticate = async (req, res, next) => {
   const authToken = req.headers.authorization;
   if (!authToken || !authToken.startsWith("Bearer")) {
     return res
@@ -21,4 +21,22 @@ const authenticate = async (req, res, next) => {
     return res.status(401).json({ success: false, message: "Invalid Token!" });
   }
 };
-export default authenticate;
+
+export const restrict = (roles) => async (req, res, next) => {
+  const userId = req.userId;
+  let user;
+  const patient = await User.findById(userId);
+  const doctor = await Doctor.findById(userId);
+  if (patient) {
+    user = patient;
+  }
+  if (doctor) {
+    user = doctor;
+  }
+  if (!roles.includes(user.role)) {
+    return res
+      .status(401)
+      .json({ success: false, message: "You are not authorized" });
+  }
+  next();
+};
